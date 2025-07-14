@@ -21,7 +21,6 @@ public class PrincipalView extends JFrame {
         setTitle("Gestión de Clientes con Tabla Hash");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
         
         JPanel panel = new JPanel(new GridLayout(4, 1, 10, 10));
         panel.setBackground(Color.white);

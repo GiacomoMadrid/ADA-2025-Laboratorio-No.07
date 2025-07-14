@@ -64,6 +64,7 @@ public class PrincipalController {
             contAgregar = new AgregarClienteController(new AgregarClienteView(), modeloLineal, modeloArbol);
         }
         contAgregar.iniciar();
+        this.vista.dispose();
     }
 
     private void abrirBuscarCliente() {
@@ -71,6 +72,7 @@ public class PrincipalController {
             contBuscar = new BuscarClienteController(new BuscarClienteView(), modeloLineal, modeloArbol);
         }
         contBuscar.iniciar();
+        this.vista.dispose();
     }
 
     private void abrirComparacion() {
@@ -78,6 +80,7 @@ public class PrincipalController {
             contComparacion = new ComparacionController(new ComparacionView(), modeloLineal, modeloArbol);
         }
         contComparacion.iniciar();
+        this.vista.dispose();
     }
 
     public void iniciar() {

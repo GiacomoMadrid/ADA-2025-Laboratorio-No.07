@@ -5,6 +5,8 @@
 package madridruizlab7;
 
 import controlador.PrincipalController;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 import modelo.TablaHashArbol;
 import modelo.TablaHashLineal;
 import vista.PrincipalView;
@@ -18,22 +20,14 @@ public class MadridRuizLab7 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-         int capacidadInicial = 20;
+    public static void main(String[] args) {        
+        int capacidadInicial = 20;
         
-        // Crear modelos
         TablaHashLineal modeloLineal = new TablaHashLineal(capacidadInicial);
         TablaHashArbol modeloArbol = new TablaHashArbol(capacidadInicial);
         
-        // Crear vista principal
-        PrincipalView vista = new PrincipalView();
-        
-        // Crear controlador principal
-        PrincipalController cont = new PrincipalController(vista, modeloLineal, modeloArbol);
+        PrincipalController cont = new PrincipalController(new PrincipalView(), modeloLineal, modeloArbol);
         cont.iniciar();
-        
-        // Mostrar la vista principal
-        vista.setVisible(true);
     }
 }
     
